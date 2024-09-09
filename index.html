@@ -49,11 +49,33 @@
         <div class="connection"></div>
     </div>
 
-    <div class="card">
+    <div class="card skeleton">
+        <div class="header">
+            <div class="skeleton-avatar"></div>
+            <div class="skeleton-text"></div>
+            <div class="skeleton-text"></div>
+        </div>
+        <div class="content">
+            <div class="skeleton-text"></div>
+            <div class="skeleton-text"></div>
+            <div class="skeleton-text"></div>
+        </div>
+        <div class="social">
+            <div class="skeleton-circle"></div>
+            <div class="skeleton-circle"></div>
+            <div class="skeleton-circle"></div>
+        </div>
+        <div class="save-contact">
+            <div class="skeleton-button"></div>
+        </div>
+    </div>
+
+    <div class="card" style="display: none;">
         <div class="header">
             <img src="https://www.dropbox.com/scl/fi/ciolqdn1roa49uka4pcm3/IMG.jpg?rlkey=uyrwwmhckv25fo5leqfcyzz9u&st=pn1m6gmd&raw=1" alt="Avatar" class="avatar">
             <h2>Ahmed Sharfi</h2>
             <p>IT Solutions Architect</p>
+            <span class="animated-line"></span>
         </div>
         <div class="content">
             <p><i class="fas fa-envelope"></i> sharfiahmed@gmail.com</p>
@@ -100,5 +122,14 @@
     })(window,document,'script','dataLayer','GTM-5KR28JTN');
     </script>
     <!-- End Google Tag Manager -->
+    <script>
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.querySelector('.card.skeleton').style.display = 'none';
+                document.querySelector('.card:not(.skeleton)').style.display = 'block';
+                document.querySelector('.animated-line').classList.add('show');
+            }, 500); // 0.5 second delay
+        });
+    </script>
 </body>
 </html>
