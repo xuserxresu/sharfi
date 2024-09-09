@@ -103,8 +103,9 @@
     <script>
         const avatar = document.querySelector('.avatar');
         avatar.addEventListener('click', function() {
-            this.classList.add('pulsing');
-            setTimeout(() => this.classList.remove('pulsing'), 500);
+            this.classList.remove('spinning');
+            void this.offsetWidth; // Trigger reflow
+            this.classList.add('spinning');
         });
     </script>
     <!-- Google Tag Manager -->

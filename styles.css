@@ -68,8 +68,19 @@ body {
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid rgba(255, 255, 255, 0.5);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.5s ease;
     cursor: pointer;
+}
+
+@keyframes spinLeftRight {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-20deg); }
+    75% { transform: rotate(20deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.avatar.spinning {
+    animation: spinLeftRight 0.5s ease-in-out;
 }
 
 .avatar:active {
