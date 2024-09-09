@@ -32,5 +32,12 @@
             </a>
         </div>
     </div>
+    <script>
+        const avatar = document.querySelector('.avatar');
+        avatar.addEventListener('click', function() {
+            this.classList.add('pulsing');
+            setTimeout(() => this.classList.remove('pulsing'), 500);
+        });
+    </script>
 </body>
 </html>
