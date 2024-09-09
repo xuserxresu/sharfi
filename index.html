@@ -2,11 +2,20 @@
 <html lang="en">
 <head>
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-5KR28JTN');</script>
+    <script>
+    (function(w,d,s,l,i){
+        try {
+            w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+            var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+            j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+            j.onerror = function() { console.error('Failed to load GTM script'); };
+            f.parentNode.insertBefore(j,f);
+            console.log('GTM script added successfully');
+        } catch (error) {
+            console.error('Error in GTM script:', error);
+        }
+    })(window,document,'script','dataLayer','GTM-5KR28JTN');
+    </script>
     <!-- End Google Tag Manager -->
 
     <meta charset="UTF-8">
@@ -21,8 +30,25 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
+    <div class="blockchain-bg">
+        <div class="node"></div>
+        <div class="node"></div>
+        <div class="node"></div>
+        <div class="node"></div>
+        <div class="node"></div>
+        <div class="node"></div>
+        <div class="node"></div>
+        <div class="node"></div>
+        <div class="connection"></div>
+        <div class="connection"></div>
+        <div class="connection"></div>
+        <div class="connection"></div>
+        <div class="connection"></div>
+        <div class="connection"></div>
+        <div class="connection"></div>
+        <div class="connection"></div>
+    </div>
+
     <div class="card">
         <div class="header">
             <img src="https://www.dropbox.com/scl/fi/ciolqdn1roa49uka4pcm3/IMG.jpg?rlkey=uyrwwmhckv25fo5leqfcyzz9u&st=pn1m6gmd&raw=1" alt="Avatar" class="avatar">
@@ -52,5 +78,21 @@
             setTimeout(() => this.classList.remove('pulsing'), 500);
         });
     </script>
+    <!-- Google Tag Manager -->
+    <script>
+    (function(w,d,s,l,i){
+        try {
+            w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+            var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+            j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+            j.onerror = function() { console.error('Failed to load GTM script'); };
+            f.parentNode.insertBefore(j,f);
+            console.log('GTM script added successfully');
+        } catch (error) {
+            console.error('Error in GTM script:', error);
+        }
+    })(window,document,'script','dataLayer','GTM-5KR28JTN');
+    </script>
+    <!-- End Google Tag Manager -->
 </body>
 </html>
