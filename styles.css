@@ -338,3 +338,13 @@ h2 {
     50% { opacity: 0; }
     100% { opacity: 1; }
 }
+
+.sudan-flag {
+    display: inline-block;
+    width: 20px;
+    height: 12px;
+    background-image: url('https://flagcdn.com/w20/sd.png');
+    background-size: cover;
+    vertical-align: middle;
+    margin-left: 5px;
+}
