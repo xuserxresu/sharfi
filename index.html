@@ -73,7 +73,7 @@
 
     <div class="card" style="display: none;">
         <div class="header">
-            <img src="https://www.dropbox.com/scl/fi/ciolqdn1roa49uka4pcm3/IMG.jpg?rlkey=uyrwwmhckv25fo5leqfcyzz9u&st=pn1m6gmd&raw=1" alt="Avatar" class="avatar">
+            <img src="https://www.dropbox.com/scl/fi/ciolqdn1roa49uka4pcm3/IMG.jpg?rlkey=uyrwwmhckv25fo5leqfcyzz9u&st=pn1m6gmd&raw=1" alt="Avatar" class="avatar" draggable="false" oncontextmenu="return false;">
             <h2>Ahmed Sharfi</h2>
             <p><span id="typed-job-title"></span></p>
             <span class="animated-line"></span>
@@ -181,6 +181,29 @@
                     cursorChar: '|'
                 });
             }, 1000); // Delay to start after the skeleton loading
+        });
+    </script>
+    <script>
+        // Prevent right-click on the entire document
+        document.addEventListener('contextmenu', event => event.preventDefault());
+
+        // Prevent drag and drop
+        document.addEventListener('dragstart', event => {
+            if (event.target.tagName === 'IMG') {
+                event.preventDefault();
+            }
+        });
+
+        // Disable print screen and ctrl+P
+        document.addEventListener('keydown', e => {
+            if (e.key === 'PrintScreen' || (e.ctrlKey && e.key === 'p')) {
+                e.preventDefault();
+            }
+        });
+
+        // Disable copying
+        document.addEventListener('copy', e => {
+            e.preventDefault();
         });
     </script>
 </body>
