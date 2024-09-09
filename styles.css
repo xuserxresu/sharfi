@@ -7,12 +7,17 @@
     100% { transform: translate(0, 0) scale(1); }
 }
 
+html {
+    height: -webkit-fill-available;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    min-height: -webkit-fill-available;
     background: linear-gradient(45deg, #13547a 0%, #80d0c7 100%);
     margin: 0;
     padding: 20px;
