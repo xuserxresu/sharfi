@@ -16,6 +16,8 @@ body {
     background-attachment: fixed;
     min-height: 100vh;
     min-height: -webkit-fill-available;
+    padding: 20px;  /* Add padding to the body */
+    box-sizing: border-box;  /* Include padding in the body's total width/height */
 }
 
 .blob {
@@ -44,13 +46,14 @@ body {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: 20px;
-    padding: 20px;
-    width: 90%;
+    padding: 30px;  /* Increase padding inside the card */
+    width: 100%;  /* Make the card take full width of its container */
     max-width: 350px;
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     border: 1px solid rgba(255, 255, 255, 0.18);
     z-index: 1;
     position: relative;
+    box-sizing: border-box;  /* Include padding in the card's total width */
 }
 
 .header {
