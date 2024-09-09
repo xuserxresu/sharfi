@@ -306,3 +306,19 @@ h2 {
     margin: 20px auto 0;
     border-radius: 20px;
 }
+
+.node, .connection {
+    transition: transform 0.3s ease-out;
+}
+
+.typed-cursor {
+    opacity: 1;
+    animation: blink 0.7s infinite;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}

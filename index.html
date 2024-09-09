@@ -23,6 +23,7 @@
     <title>Contact Card</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -74,7 +75,7 @@
         <div class="header">
             <img src="https://www.dropbox.com/scl/fi/ciolqdn1roa49uka4pcm3/IMG.jpg?rlkey=uyrwwmhckv25fo5leqfcyzz9u&st=pn1m6gmd&raw=1" alt="Avatar" class="avatar">
             <h2>Ahmed Sharfi</h2>
-            <p>IT Solutions Architect</p>
+            <p><span id="typed-job-title"></span></p>
             <span class="animated-line"></span>
         </div>
         <div class="content">
@@ -129,6 +130,56 @@
                 document.querySelector('.card:not(.skeleton)').style.display = 'block';
                 document.querySelector('.animated-line').classList.add('show');
             }, 1000); // 1 second delay
+        });
+    </script>
+    <script>
+        const nodes = document.querySelectorAll('.node');
+        const connections = document.querySelectorAll('.connection');
+        const container = document.querySelector('.blockchain-bg');
+
+        function moveBackground(e) {
+            const { clientX, clientY } = e.touches ? e.touches[0] : e;
+            const x = (clientX / window.innerWidth - 0.5) * 20;
+            const y = (clientY / window.innerHeight - 0.5) * 20;
+
+            nodes.forEach(node => {
+                node.style.transform = `translate(${x}px, ${y}px)`;
+            });
+
+            connections.forEach(connection => {
+                connection.style.transform = `translate(${x * 0.5}px, ${y * 0.5}px)`;
+            });
+        }
+
+        function resetBackground() {
+            nodes.forEach(node => {
+                node.style.transform = 'translate(0, 0)';
+            });
+
+            connections.forEach(connection => {
+                connection.style.transform = 'translate(0, 0)';
+            });
+        }
+
+        container.addEventListener('mousemove', moveBackground);
+        container.addEventListener('touchmove', moveBackground);
+        container.addEventListener('mouseleave', resetBackground);
+        container.addEventListener('touchend', resetBackground);
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                new Typed('#typed-job-title', {
+                    strings: ['IT Solutions Architect', 'Tech Enthusiast', 'Problem Solver'],
+                    typeSpeed: 50,
+                    backSpeed: 30,
+                    backDelay: 1500,
+                    startDelay: 500,
+                    loop: true,
+                    showCursor: true,
+                    cursorChar: '|'
+                });
+            }, 1000); // Delay to start after the skeleton loading
         });
     </script>
 </body>
