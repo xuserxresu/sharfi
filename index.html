@@ -23,7 +23,8 @@
     <title>Contact Card</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;600&display=swap" rel="stylesheet">
+    
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -75,13 +76,13 @@
         <div class="header">
             <img src="https://www.dropbox.com/scl/fi/ciolqdn1roa49uka4pcm3/IMG.jpg?rlkey=uyrwwmhckv25fo5leqfcyzz9u&st=pn1m6gmd&raw=1" alt="Avatar" class="avatar" draggable="false" oncontextmenu="return false;">
             <h2>Ahmed Sharfi</h2>
-            <p><span id="typed-job-title"></span></p>
+            <p class="job-title">IT Solutions Architect</p>
             <span class="animated-line"></span>
         </div>
         <div class="content">
-            <p><i class="fas fa-envelope"></i> sharfiahmed@gmail.com</p>
-            <p><i class="fas fa-phone"></i> +971 56 342 1302</p>
             <p><i class="fas fa-map-marker-alt"></i> UAE, AD</p>
+            <p><i class="fas fa-phone"></i> +971 56 342 1302</p>            
+            <p><i class="fas fa-envelope"></i> sharfiahmed@gmail.com</p>
         </div>
         <div class="social">
             <a href="https://www.linkedin.com/in/sharfi" class="social-icon"><i class="fab fa-linkedin"></i></a>         
@@ -167,22 +168,7 @@
         container.addEventListener('mouseleave', resetBackground);
         container.addEventListener('touchend', resetBackground);
     </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            setTimeout(function() {
-                new Typed('#typed-job-title', {
-                    strings: ['IT Solutions Architect', 'Tech Enthusiast', 'Problem Solver'],
-                    typeSpeed: 50,
-                    backSpeed: 30,
-                    backDelay: 1500,
-                    startDelay: 500,
-                    loop: true,
-                    showCursor: true,
-                    cursorChar: '|'
-                });
-            }, 1000); // Delay to start after the skeleton loading
-        });
-    </script>
+    
     <script>
         // Prevent right-click on the entire document
         document.addEventListener('contextmenu', event => event.preventDefault());

@@ -8,11 +8,11 @@ html, body {
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Urbanist', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(45deg, #13547a 0%, #80d0c7 100%);
+    background: linear-gradient(45deg, #131855 0%, #133955 50%, #135550 100%);
     background-attachment: fixed;
     min-height: 100vh;
     min-height: -webkit-fill-available;
@@ -30,19 +30,19 @@ body {
 }
 
 .blob-1 {
-    background: rgba(19, 84, 122, 0.8);  /* Darker shade of the gradient start color */
+    background: rgba(19, 24, 85, 0.8);  /* Space Cadet with opacity */
     top: -150px;
     left: -150px;
 }
 
 .blob-2 {
-    background: rgba(128, 208, 199, 0.8);  /* Lighter shade of the gradient end color */
+    background: rgba(19, 85, 80, 0.8);  /* Brunswick Green with opacity */
     bottom: -150px;
     right: -150px;
 }
 
 .card {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(19, 57, 85, 0.2);  /* Poseidon with low opacity for glassmorphism */
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: 20px;
@@ -103,18 +103,21 @@ body {
 }
 
 h2 {
+    font-family: 'Urbanist', sans-serif;
     margin: 10px 0 5px;
     color: #fff;
     font-weight: 600;
 }
 
 .header p {
+    font-family: 'Urbanist', sans-serif;
     margin: 0;
     color: rgba(255, 255, 255, 0.8);
     font-weight: 300;
 }
 
 .content p {
+    font-family: 'Urbanist', sans-serif;
     color: rgba(255, 255, 255, 0.9);
     margin: 10px 0;
 }
@@ -153,7 +156,7 @@ h2 {
 
 .save-button {
     display: inline-block;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(19, 24, 85, 0.4);  /* Space Cadet with opacity */
     color: #fff;
     text-decoration: none;
     padding: 10px 20px;
@@ -163,7 +166,7 @@ h2 {
 }
 
 .save-button:hover {
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(19, 85, 80, 0.5);  /* Brunswick Green with opacity */
     transform: translateY(-2px);
 }
 
@@ -210,7 +213,7 @@ h2 {
     position: absolute;
     width: 10px;
     height: 10px;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.8);  /* Keep nodes white for contrast */
     border-radius: 50%;
     animation: pulse 4s infinite ease-in-out, float3D 10s infinite ease-in-out;
 }
@@ -290,7 +293,7 @@ h2 {
 }
 
 .skeleton-text, .skeleton-avatar, .skeleton-circle, .skeleton-button {
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 25%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.1) 75%);
+    background: linear-gradient(90deg, rgba(19, 57, 85, 0.1) 25%, rgba(19, 57, 85, 0.2) 50%, rgba(19, 57, 85, 0.1) 75%);
     background-size: 200% 100%;
     animation: skeleton-loading 1.5s infinite;
 }
@@ -327,17 +330,6 @@ h2 {
     transition: transform 0.3s ease-out;
 }
 
-.typed-cursor {
-    opacity: 1;
-    animation: blink 0.7s infinite;
-    color: rgba(255, 255, 255, 0.8);
-}
-
-@keyframes blink {
-    0% { opacity: 1; }
-    50% { opacity: 0; }
-    100% { opacity: 1; }
-}
 
 .sudan-flag {
     display: inline-block;
@@ -347,4 +339,27 @@ h2 {
     background-size: cover;
     vertical-align: middle;
     margin-left: 5px;
+}
+.job-title {
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 400;
+    background: linear-gradient(45deg, #ffffff, #a0a0a0, #ffffff);
+    background-size: 200% 200%;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: gradient-animation 5s ease infinite;
+    letter-spacing: 1px;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
